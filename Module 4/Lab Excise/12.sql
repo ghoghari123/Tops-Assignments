@@ -17,3 +17,4 @@ update  employees set salary = 8000 where emp_id = 208;
 update  employees set salary = 9000 where emp_id = 209;
 update  employees set salary = 1200 where emp_id = 210;
 select * from employees;
+select department_id,avg(salary) as average_salary from employees group by department_id;
