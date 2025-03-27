@@ -1,0 +1,156 @@
+<!-- Task: Create a product catalog table that includes the following columns:
+o Product Name
+o Product Image (use placeholder image URLs)
+o Price
+o Description
+o Availability (in stock, out ofstock)
+Additional Requirements:
+o Use thead for the table header.
+o Add a border and some basic styling using inline CSS.
+o Use colspan or rowspan to merge cells where applicable. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+</head>
+<body>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-color: black;
+            margin: 20px;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        thead
+        {
+            color: aliceblue;
+            background-color: rgb(45, 43, 42);
+        }
+        thead tr th
+        {
+            padding: 1rem;
+            font-size: 2rem;
+        }
+        tbody
+        {
+            text-align: center;
+            font-size: 1.5rem;
+            color: rgb(238, 241, 244);
+            background-color: rgb(58, 55, 55);
+            border: 2px solid rgb(190, 183, 183);
+        }
+        tbody img
+        {
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+            margin-left: 10px;
+        }
+        tbody td p
+        {
+            padding: 2rem;
+        }
+    </style>
+    <table border="5px">
+        <thead>
+            <tr>
+                <th>Product Number</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Laptop</td>
+                <td><img src="images/1.jpg" alt=""></td>
+                <td>45,000/-</td>
+                <td rowspan="2"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nisi consequatur adipisci illo repellat nostrum provident tempore maxime.</p></td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Smart Phones</td>
+                <td><img src="images/2.jpg" alt=""></td>
+                <td>18,000/-</td>
+                <td>Out Of Stock</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Motivational Books</td>
+                <td><img src="images/3.jpg" alt=""></td>
+                <td>50/-</td>
+                <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nisi consequatur adipisci illo repellat nostrum provident tempore maxime.</p></td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Watchs</td>
+                <td><img src="images/4.jpg" alt=""></td>
+                <td>500/-</td>
+                <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nisi consequatur adipisci illo repellat nostrum provident tempore maxime.</p></td>
+                <td>Out Of Stock</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Te-shirts</td>
+                <td><img src="images/5.jpg" alt=""></td>
+                <td>950/-</td>
+                <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nisi consequatur adipisci illo repellat nostrum provident tempore maxime.</p></td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Water Bottel</td>
+                <td><img src="images/6.jpg" alt=""></td>
+                <td>350/-</td>
+                <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nisi consequatur adipisci illo repellat nostrum provident tempore maxime.</p></td>
+                <td>Out Of Stock</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Silk Dairymilk</td>
+                <td><img src="images/7.jpg" alt=""></td>
+                <td>100/-</td>
+                <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nisi consequatur adipisci illo repellat nostrum provident tempore maxime.</p></td>
+                <td rowspan="2">In Stock</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Green Apple</td>
+                <td><img src="images/8.jpg" alt=""></td>
+                <td>150/-</td>
+                <td rowspan="2"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nisi consequatur adipisci illo repellat nostrum provident tempore maxime.</p></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Casata Ice-Creams</td>
+                <td><img src="images/9.jpg" alt=""></td>
+                <td rowspan="2">60/-</td>
+                <td rowspan="2">Out Of Stock</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Kurkure</td>
+                <td><img src="images/10.jpg" alt=""></td>
+                <td><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nisi consequatur adipisci illo repellat nostrum provident tempore maxime.</p></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

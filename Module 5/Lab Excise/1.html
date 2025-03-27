@@ -1,0 +1,209 @@
+<!-- : Create a simple HTML webpage that includes:
+o A header (<header>), footer (<footer>), main section (<main>), and aside section
+(<aside>).
+o A paragraph with some basic text.
+o A list (both ordered and unordered).
+o A link that opens in a new tab. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            font-size: 3rem;
+            background-color: black;
+            text-align: center;
+            color: bisque;
+            padding: 2rem;
+        }
+
+        header:hover {
+            color: burlywood;
+            box-shadow: 5px 5px 10px rgb(241, 173, 173);
+        }
+
+        body {
+            background-color: rgb(103, 86, 86);
+        }
+
+        section {
+            margin: 2%;
+            padding: 2rem;
+        }
+
+        span {
+            color: coral;
+            margin-left: 35%;
+            font-size: 2rem;
+        }
+
+        section p {
+            font-size: 2rem;
+            color: rgb(248, 244, 244);
+        }
+
+        b {
+            color: rgb(190, 184, 184);
+        }
+
+        b:hover {
+            color: black;
+        }
+
+        strike {
+            color: black;
+        }
+
+        sup {
+            color: aquamarine;
+        }
+
+        h4 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+            color: rgb(251, 215, 189);
+        }
+
+        ol {
+            margin-left: 80px;
+            font-size: 1.4rem;
+            color: rgb(186, 242, 244);
+        }
+
+        li {
+            color: rgb(250, 246, 246);
+        }
+
+        ul {
+            margin-left: 80px;
+            font-size: 1.4rem;
+            color: rgb(186, 242, 244);
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        blockquote {
+            margin-left: 66%;
+            font-size: 2rem;
+        }
+
+        a :hover {
+            color: rgb(42, 42, 43);
+        }
+
+        footer {
+            background-color: darkslategrey;
+            text-align: center;
+            padding: 3rem;
+            font-size: 3rem;
+            margin-top: 1%;
+        }
+        footer:hover
+        {
+            color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome To My Webpage</h1>
+    </header>
+    <section>
+        <p>Lorem ipsumdolor <u>sit amet consectetur adipisicing elit</u>. Libero velit animi voluptatibus accusantium
+            voluptates, dignissimos tenetur mollitia quidem facere culpa dolorem, necessitatibus harum.
+            <b><i>Lorem</i></b> ipsum
+            dolor sit, amet consectetur adipisicing elit. Labore reiciendis sapiente aperiam officiis quasi quae maiores
+            hic, placeat cum unde rerum mollitia nihil <strike><sup>nobis numquam provident molestias eveniet commodi ipsa
+                expedita.</sup></strike>
+            Quibusdam, architecto aliquam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere inventore ab
+            obcaecati error magnam, illo iusto reprehenderit rem laudantium ullam similique quo possimus dignissimos
+            corporis?
+        </p>
+        <a href="https://www.youtube.com/watch?v=BsDoLVMnmZs" target="_blank">
+            <blockquote>Visit For More Information —⟫ </blockquote>
+        </a>
+        <h4>Order List</h4>
+        <ol>
+            <li>Car Showroom</li>
+            <ol type="a">
+                <li>BMW</li>
+                <ol type="i">
+                    <li>Model 1</li>
+                    <li>model 2</li>
+                </ol>
+                <li>Lamborghini</li>
+                <ol type="i">
+                    <li>Model 1</li>
+                    <li>model 2</li>
+                </ol>
+            </ol>
+            <li>Bike Showroom</li>
+            <ol type="a">
+                <li>Honda</li>
+                <ol type="i">
+                    <li>Model 1</li>
+                    <li>model 2</li>
+                </ol>
+                <li>Splender</li>
+                <ol type="i">
+                    <li>Model 1</li>
+                    <li>model 2</li>
+                </ol>
+            </ol>
+            <li>Scooter Showroom</li>
+            <ol type="a">
+                <li>Yamaha</li>
+                <ol type="i">
+                    <li>Model 1</li>
+                    <li>model 2</li>
+                </ol>
+                <li>Bajaj</li>
+                <ol type="i">
+                    <li>Model 1</li>
+                    <li>model 2</li>
+                </ol>
+            </ol>
+        </ol>
+        <h4>Unorder List</h4>
+        <ul>
+            <li>TOPS Technologies</li>
+            <ul type="circle">
+                <li>Full Stack Devlopment</li>
+                <ul>
+                    <li>Front-End Coding</li>
+                    <li>Back-End Coding</li>
+                </ul>
+                <li>Graphics Designing</li>
+                <ul>
+                    <li>Illustrator</li>
+                    <li>Figma</li>
+                </ul>
+            </ul>
+            <li>Veer Narmad South Gujrat University</li>
+            <ul type="circle">
+                <li>BCA</li>
+                <li>BBA</li>
+                <li>B.COM</li>
+            </ul>
+        </ul>
+    </section>
+    <footer>
+        <h5>@copy; 2025 My Webpage. All Rights Reserved</h5>
+    </footer>
+</body>
+
+</html>
