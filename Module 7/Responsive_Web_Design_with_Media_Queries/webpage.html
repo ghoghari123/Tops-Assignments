@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Webpage</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 98vh;
+        }
+
+        /* header */
+        #header {
+            display: flex;
+            background-color: black;
+            width: 100%;
+        }
+
+        /* logo */
+        .logo {
+            margin-left: 2%;
+            font-size: 2rem;
+            padding: 1rem;
+            font-family: fantasy;
+            width: 80%;
+            color: azure;
+            margin-top: 1%;
+        }
+
+        .slogan {
+            font-size: 40%;
+            font-family: cursive;
+        }
+
+        /* navigation bar */
+        .nav {
+            margin-right: 1%;
+            width: 40%;
+            padding: 3rem;
+        }
+
+        .nav a {
+            margin-left: 3rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+        .nav a:hover {
+            padding: 0.9rem;
+            color: burlywood;
+            box-shadow: 0px 0px 5px rgb(157, 94, 94);
+            background-color: rgb(49, 47, 47);
+        }
+
+        /* icon */
+        .icon {
+            position: absolute;
+            color: beige;
+            margin-left: 97%;
+            margin-top: 2.5%;
+            font-size: 1.6rem;
+        }
+
+        .icon sup {
+            font-size: 40%;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .icon:hover {
+            color: rgb(200, 200, 211);
+            filter: drop-shadow(0px 0px 6px rgb(180, 81, 81));
+        }
+
+        /* main section */
+        .main {
+            position: absolute;
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(35deg, rgb(34, 33, 33), rgb(170, 168, 168), rgb(201, 197, 197), rgb(88, 87, 87));
+            height: 87%;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 2.6rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 0.3rem;
+        }
+
+        /* paragraph section */
+        .para {
+            padding: 2rem;
+            font-size: 1.5rem;
+        }
+
+        /* footer section */
+        .footer {
+            position: absolute;
+            background-color: black;
+            font-size: 1.5rem;
+            color: rgb(238, 101, 222);
+            margin-top: -2.1%;
+            padding: 1rem;
+            width: 100%;
+            letter-spacing: 0.2rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 0.rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .slogan {
+                font-size: 0.rem;
+            }
+
+            .nav {
+                margin-top: -7%;
+            }
+
+            .nav a {
+                font-size: 1rem;
+            }
+
+            .nav a:hover {
+                padding: 0;
+                background-color: rgb(49, 47, 47);
+            }
+
+            .main {
+                padding: 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .para {
+                font-size: 1rem;
+            }
+
+            .icon {
+                align-self: flex-end;
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .footer {
+                margin-top: 31%
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header id="header">
+            <div class="logo">
+                Flexora <br> <sup class="slogan">Powering My Digital Flexibility</sup>
+            </div>
+            <div class="nav">
+                <a href="">About</a>
+                <a href="">Products</a>
+                <a href="">Book</a>
+                <a href="">Contact</a>
+            </div>
+        </header>
+        <div class="content">
+            <aside class="sidebar">
+                <h3></h3>
+            </aside>
+            <main class="main">
+                <h2>Welcome To Flexora</h2>
+                <p class="para">
+                    At Flexora, innovation is not just a buzzword—it is the core of everything we do. In a world
+                    that moves fast, we move faster, embracing challenges as opportunities and transforming complexity
+                    into
+                    simplicity. Our solutions are built to be as agile as the people who use them—scalable, secure,
+                    andsmart.
+                    <br><br>
+                    From seamless user interfaces to powerful backend frameworks, Flexora delivers with precision
+                    and passion. Every line of code, every design element, and every customer interaction is rooted in
+                    our
+                    mission: to empower businesses and individuals to thrive in a digital-first future.
+                    <br><br>
+                    We believe that true flexibility means more than just adaptability—it means foresight,
+                    resilience, and the courage to break boundaries. Our team of thinkers, builders, and dreamers
+                    collaborates to
+                    bring you products that do not just meet expectations—they exceed them.
+                    <br><br>
+                    Whether you are a startup ready to launch or an enterprise aiming to scale, Flexora is your
+                    partner in progress. We do not just create solutions. We craft experiences. We do not just keep up.
+                    We
+                    lead.
+        </div>
+    </div>
+    </p>
+    </main>
+    </div>
+    </div>
+    <div class="footer">
+        <marquee behavior="scroll" direction="left">@Copy; 2025 Flexora. All Rights Reserved.</marquee>
+    </div>
+
+</body>
+
+</html>
