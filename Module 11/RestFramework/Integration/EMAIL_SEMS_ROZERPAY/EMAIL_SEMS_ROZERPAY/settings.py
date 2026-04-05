@@ -124,8 +124,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587 # Use 587 for TLS, or 465 for SSL
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False # Set to True if using port 465
-EMAIL_HOST_USER = 'riyaghoghari02@gmail.com'
-EMAIL_HOST_PASSWORD = 'idon psbv tbkt oeth' # Use an app-specific password,  
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = '' # Use an app-specific password,  
 
 # RAZORPAY_KEY = os.getenv("rzp_test_SZnPkzoYIJMiAl")
 # RAZORPAY_SECRET = os.getenv("sJ40uY6v4EW2638nEVZsdmJJ")
