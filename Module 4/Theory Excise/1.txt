@@ -1,0 +1,21 @@
+Length:
+Millimeter (mm): 1/1000 of a meter.
+Centimeter (cm): 1/100 of a meter.
+Meter (m): The base unit of length.
+Kilometer (km): 1000 meters. 
+
+Mass:
+Milligram (mg): 1/1000 of a gram.
+Gram (g): The base unit of mass.
+Kilogram (kg): 1000 grams. s
+
+Volume:
+Milliliter (mL): 1/1000 of a liter.
+Liter (L): The base unit of volume.
+Kiloliter (kL): 1000 liters. 
+
+Example Conversions:
+1 meter (m) = 100 centimeters (cm) = 1000 millimeters (mm)
+1 kilometer (km) = 1000 meters (m)
+1 kilogram (kg) = 1000 grams (g)
+1 liter (L) = 1000 milliliters (mL) 

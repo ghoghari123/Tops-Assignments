@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+}
+
+/* header */
+#header {
+    display: flex;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+}
+
+/* logo */
+.logo {
+    margin-left: 2%;
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: fantasy;
+    width: 80%;
+    color: azure;
+    margin-top: 1%;
+}
+
+.slogan {
+    font-size: 40%;
+    font-family: cursive;
+}
+
+/* navigation bar */
+.nav {
+    margin-right: 1%;
+    width: 40%;
+    padding: 3rem;
+}
+
+.nav a {
+    margin-left: 3rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.nav a:hover {
+    padding: 0.9rem;
+    color: burlywood;
+    box-shadow: 0px 0px 5px rgb(157, 94, 94);
+    background-color: rgb(49, 47, 47);
+}
+
+/* icon */
+.icon {
+    position: absolute;
+    color: beige;
+    margin-left: 97%;
+    margin-top: 2.5%;
+    font-size: 1.6rem;
+}
+
+.icon sup {
+    font-size: 40%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.icon:hover {
+    color: rgb(200, 200, 211);
+    filter: drop-shadow(0px 0px 6px rgb(180, 81, 81));
+}
+
+/* main section */
+.main {
+    position: absolute;
+    margin-top: 6%;
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(35deg, rgb(34, 33, 33), rgb(170, 168, 168), rgb(201, 197, 197), rgb(88, 87, 87));
+    height: 87%;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.3rem;
+}
+
+/* paragraph section */
+.para
+{
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+/* footer section */
+.footer {
+    position: absolute;
+    position: fixed;
+    background-color: black;
+    font-size: 1.5rem;
+    color: rgb(238, 101, 222);
+    margin-top: -2.1%;
+    padding: 1rem;
+    width: 100%;
+    letter-spacing: 0.2rem;
+}
