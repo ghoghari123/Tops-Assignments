@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+    <script>
+        // PRINT 1 - 10 NUMBER USING FOR LOOP
+        document.write("<h3> PRINT 1 - 10 NUMBER USING FOR LOOP </h3>");
+        for (let index = 1; index <= 10; index++) {
+            document.write(index);
+            document.write("<br>");
+        }
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+        // USING WHILE LOOP TO SUM ALL EVEN NUMBERS BETWEEN 1 - 20
+        document.write("<h3> USING WHILE LOOP TO SUM ALL EVEN NUMBERS BETWEEN 1 - 20 </h3>");
+        let i = 1;
+        sum = 0
+        while (i <= 20) {
+            if (i % 2 == 0) {
+                sum += i;
+            } i++;
+        }
+        document.write("Sum of even numbers from 1 to 20 : ", sum);
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+        // This program keeps asking the user to enter a number, until they enter a number greater than 10
+        alert("Enter the Greater Number Gussing Game");
+        let num;
+        do {
+            num = Number(prompt("Enter Number : "));
+        } while (num <= 10);
+        alert("Congratulations! You Enter A Number Greater Than 10..! ")
+
+    </script>
+</body>
+
+</html>

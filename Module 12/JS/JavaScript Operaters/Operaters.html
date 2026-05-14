@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators</title>
+</head>
+
+<body>
+    <script>
+        console.log(" ------------- Arithmetic Operators -------------");
+        let n1, n2, ans;
+
+        n1 = prompt("Enter The Value Of N1");
+        n2 = prompt("Enter The Value Of N2");
+
+        n1 = Number(n1);
+        n2 = Number(n2);
+
+        ans = n1 + n2;
+        console.log("Addition : ", ans);
+        ans = n1 - n2;
+        console.log(" Substraction : ", ans);
+        ans = n1 * n2;
+        console.log("Multiplication : ", ans);
+        ans = n1 / n2;
+        console.log("Division : ", ans);
+        ans = n1 % n2;
+        console.log("Modules : ", ans);
+
+        console.log(" ------------- Comparison Operators -------------");
+        if (n1 === n2) {
+            console.log("Both are equale");
+        }
+        else if (n1 > n2) {
+            console.log("N1 is Greater Than N2");
+        }
+        else {
+            console.log("N2 is Greater Than N1");
+        }
+
+        console.log(" -------------  logical Operators -------------");
+        if (n1 > 10 && n2 < 5) {
+            console.log("Both conditions are true");
+        } else {
+            console.log("Both conditions are not true");
+        }
+    </script>
+</body>
+
+</html>
