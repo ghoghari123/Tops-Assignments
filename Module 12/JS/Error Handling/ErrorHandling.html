@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+
+<body>
+    <script>
+        // Write a JavaScript program that attempts to divide a number by zero. Use trycatchto handle the error and display an appropriate error message
+
+        try {
+            let n1, n2;
+            n1 = Number(prompt("Enter The Value N1"));
+            n2 = Number(prompt("Enter The Value N2"));
+            if (n2 != 0) {
+                let result = n1 / n2;
+                alert(result)
+            }
+            else {
+                throw "You Can't Divided By 0"
+            }
+        } catch (error) {
+            alert(error)
+        }
+    </script>
+</body>
+
+</html>
