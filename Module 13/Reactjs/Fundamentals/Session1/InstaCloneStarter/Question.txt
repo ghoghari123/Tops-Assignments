@@ -1,0 +1,5 @@
+how React's Virtual DOM makes updating the UI faster compared to traditional DOM manipulation
+
+-> React using Virtual DOM, which is lightweight copy of the real DOM stored in memory.
+-> When data changes, React first updates the virtual DOM and compare it with the previous version.
+-> React's Virtual DOM updates only the changed parts of a webpage instead of reloading the entire DOM, making UI updates faster and more efficient.
