@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import TrendingSongs from './Components/TrendingSongs'
 import IPLScoreFetcher from './Components/IPLScoreFetcher'
+import MovieSuggestions from './Components/MovieSuggestions'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,6 +36,7 @@ function App() {
       <div className='p-4 bg-blue-950'>
         <TrendingSongs songs={songs} />
         <IPLScoreFetcher />
+        <MovieSuggestions />
       </div>
     </>
   )

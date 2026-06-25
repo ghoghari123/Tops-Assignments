@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Links Form</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Music & Gamer Profile</h1>
+
+        <!-- Music Links Form -->
+        <form id="musicLinksForm">
+
+            <div class="input-group">
+                <i class="bi bi-spotify"></i>
+                <input type="url" id="spotify" placeholder="Spotify Profile URL" required>
+            </div>
+
+            <div class="input-group">
+                <i class="bi bi-youtube"></i>
+                <input type="url" id="youtube" placeholder="YouTube Music Profile URL" required>
+            </div>
+
+            <div class="input-group">
+                <i class="bi bi-apple"></i>
+                <input type="url" id="apple" placeholder="Apple Music Profile URL" required>
+            </div>
+
+            <button type="submit">Generate Preview</button>
+
+        </form>
+
+        <hr>
+
+        <!-- Gamer Bio -->
+
+        <div class="gamer-card">
+            <h2>ShadowHunter</h2>
+
+            <div class="links">
+
+                <a href="https://www.twitch.tv" target="_blank">Twitch</a>
+
+                <a href="https://discord.com" target="_blank">Discord</a>
+
+                <a href="https://store.steampowered.com" target="_blank">Steam</a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- Preview Cards -->
+
+        <div id="previewContainer"></div>
+
+    </div>
+
+    <script>
+
+        document.getElementById("musicLinksForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            let preview = document.getElementById("previewContainer");
+
+            preview.innerHTML = "";
+
+            createCard(
+                "Spotify",
+                document.getElementById("spotify").value,
+                "spotify-card",
+                "bi bi-spotify"
+            );
+
+            createCard(
+                "YouTube Music",
+                document.getElementById("youtube").value,
+                "youtube-card",
+                "bi bi-youtube"
+            );
+
+            createCard(
+                "Apple Music",
+                document.getElementById("apple").value,
+                "apple-card",
+                "bi bi-apple"
+            );
+
+        });
+
+        function createCard(platform, url, cls, icon) {
+
+            let username = url.substring(url.lastIndexOf("/") + 1);
+
+            let card = document.createElement("div");
+
+            card.className = "preview-card " + cls;
+
+            card.innerHTML =
+                `
+<i class="${icon}"></i>
+<h3>${platform}</h3>
+<p>${username}</p>
+<a href="${url}" target="_blank">Visit</a>
+`;
+
+            document.getElementById("previewContainer").appendChild(card);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

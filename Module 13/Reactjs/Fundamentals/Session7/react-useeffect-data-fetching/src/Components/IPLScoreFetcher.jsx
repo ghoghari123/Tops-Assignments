@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function IPLScoreFetcher() {
+
+    const [headline, setHeadline] = useState("Loading...")
+
+    const fetchMatchData = async () => {
+        try {
+            const res = await fetch("https://jsonplaceholder.typicode.com/posts")
+            const data = await res.json()
+            setHeadline(data[0].title)
+        } catch (error) {
+            console.log("Error fetching match data : ", error)
+            setHeadline("Failed to load match headline")
+        }
+    }
+    useEffect(() => {
+        fetchMatchData()
+    }, [])
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-900 flex items-center justify-center p-6">
             <div className="w-full max-w-2xl bg-white rounded-3xl shadow-2xl overflow-hidden">
@@ -25,31 +42,9 @@ function IPLScoreFetcher() {
                         </h2>
 
                         <p className="text-gray-600 text-lg">
-                            Match headline will appear here...
+                            {headline}
                         </p>
                     </div>
-
-                    {/* Stats Section */}
-                    <div className="grid grid-cols-2 gap-4 mt-6">
-                        <div className="bg-blue-50 p-4 rounded-xl text-center">
-                            <h3 className="text-sm text-gray-500">Current Score</h3>
-                            <p className="text-2xl font-bold text-blue-700">
-                                185/4
-                            </p>
-                        </div>
-
-                        <div className="bg-purple-50 p-4 rounded-xl text-center">
-                            <h3 className="text-sm text-gray-500">Overs</h3>
-                            <p className="text-2xl font-bold text-purple-700">
-                                18.2
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Button */}
-                    <button className="w-full mt-6 bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 rounded-xl font-semibold hover:opacity-90 transition">
-                        Refresh Score
-                    </button>
                 </div>
 
             </div>

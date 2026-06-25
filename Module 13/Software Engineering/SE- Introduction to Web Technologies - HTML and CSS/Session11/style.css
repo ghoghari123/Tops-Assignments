@@ -1,0 +1,24 @@
+/* Override Bootstrap Primary Button */
+
+.btn-primary {
+
+    background-color: #8e44ad;
+    border-color: #8e44ad;
+
+}
+
+.btn-primary:hover {
+
+    background-color: #6c3483;
+    border-color: #6c3483;
+
+}
+
+/* Image Size */
+
+.card img {
+
+    height: 250px;
+    object-fit: cover;
+
+}

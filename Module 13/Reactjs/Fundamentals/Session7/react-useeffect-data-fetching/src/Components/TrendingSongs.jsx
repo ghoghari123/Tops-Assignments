@@ -29,10 +29,6 @@ function TrendingSongs({ songs }) {
                             </div>
                         ))
                     }
-
-                    <button className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-500 py-3 rounded-xl font-semibold hover:opacity-90 transition">
-                        View All Songs
-                    </button>
                 </div>
 
             </div>

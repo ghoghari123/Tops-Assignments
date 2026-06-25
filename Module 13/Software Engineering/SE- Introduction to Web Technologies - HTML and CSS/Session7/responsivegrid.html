@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Product Grid</title>
+
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid gray;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Tablet */
+        @media (max-width:768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width:480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Responsive Product Grid</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <p>Product 1</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <p>Product 2</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <p>Product 3</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <p>Product 4</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <p>Product 5</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="">
+            <p>Product 6</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

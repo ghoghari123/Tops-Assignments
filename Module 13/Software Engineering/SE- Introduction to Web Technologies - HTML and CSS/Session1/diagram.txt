@@ -1,0 +1,17 @@
+html
+│
+├── head
+│   ├── meta (charset="UTF-8")
+│   ├── meta (viewport)
+│   └── title
+│       └── "My Profile"
+│
+└── body
+    ├── h1
+    │   └── "John Doe"
+    ├── p
+    │   └── "Hello! My name is John Doe. I am a student who enjoys learning web development, programming, and creating simple websites."
+    └── img
+        ├── src="profile.jpg"
+        ├── alt="Profile Picture"
+        └── width="200"
