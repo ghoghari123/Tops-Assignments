@@ -1,0 +1,63 @@
+-- 1. Insert a New Order and Use COMMIT
+CREATE TABLE Orderss (order_id INT PRIMARY KEY, customer_name VARCHAR(100), amount DECIMAL(10,2));
+INSERT INTO Orderss VALUES (101, 'Rahul', 799.00);
+COMMIT;
+SELECT * FROM Orderss;
+
+-- 2. Zomato-style Order Process Using ROLLBACK
+CREATE TABLE OrderItems (item_id INT PRIMARY KEY, item_name VARCHAR(100), price DECIMAL(10,2));
+INSERT INTO OrderItems VALUES (1, 'Paneer Pizza', 299.00);
+INSERT INTO OrderItems VALUES (2, 'Cold Coffee', 149.00);
+ROLLBACK;
+SELECT * FROM OrderItems;
+
+-- 3. Flipkart-style Cart Using SAVEPOINT
+CREATE TABLE Cart (product_id INT PRIMARY KEY, product_name VARCHAR(100));
+INSERT INTO Cart VALUES (1, 'Laptop');
+SAVEPOINT cart_save;
+INSERT INTO Cart VALUES (2, 'Wireless Mouse');
+ROLLBACK TO cart_save;
+COMMIT;
+SELECT * FROM Cart;
+
+-- 4. Trigger to Deduct Wallet Balance Automatically
+CREATE TABLE Wallet (user_id INT PRIMARY KEY, balance DECIMAL(10,2));
+CREATE TABLE Transactions (transaction_id INT PRIMARY KEY, user_id INT, purchase_amount DECIMAL(10,2));
+DELIMITER //
+CREATE TRIGGER deduct_wallet_balance
+AFTER INSERT ON Transactions
+FOR EACH ROW
+BEGIN
+    UPDATE Wallet
+    SET balance = balance - NEW.purchase_amount
+    WHERE user_id = NEW.user_id;
+END //
+DELIMITER ;
+INSERT INTO Wallet VALUES (1, 5000);
+INSERT INTO Transactions VALUES (101, 1, 1200);
+SELECT * FROM Wallet;
+
+-- 5. Buggy Trigger Scenario and Corrected Trigger
+DELIMITER //
+CREATE TRIGGER buggy_wallet_trigger
+AFTER INSERT ON Transactions
+FOR EACH ROW
+BEGIN
+    UPDATE Wallet
+    SET balance = balance + NEW.purchase_amount
+    WHERE user_id = NEW.user_id;
+END //
+DELIMITER ;
+INSERT INTO Wallet VALUES (2, 3000);
+INSERT INTO Transactions VALUES (102, 2, 500);
+SELECT * FROM Wallet WHERE user_id = 2;
+DELIMITER //
+CREATE TRIGGER correct_wallet_trigger
+AFTER INSERT ON Transactions
+FOR EACH ROW
+BEGIN
+    UPDATE Wallet
+    SET balance = balance - NEW.purchase_amount
+    WHERE user_id = NEW.user_id;
+END //
+DELIMITER ;

@@ -1,0 +1,30 @@
+CREATE TABLE playlistss (
+    playlist_id INT PRIMARY KEY,
+    user_id INT,
+    name VARCHAR(100),
+    created_at DATETIME,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+INSERT INTO playlistss (playlist_id, user_id, name, created_at) VALUES
+(1, 101, 'Workout Mix', '2026-06-01 08:30:00'),
+(2, 101, 'Chill Vibes', '2026-06-15 20:00:00'),
+(3, 102, 'Top Hits', '2026-06-20 18:45:00');
+UPDATE playlistss SET name = 'Evening Chill' WHERE user_id = 101 AND name = 'Chill Vibes';
+DELETE FROM playlistss WHERE user_id = 101 AND name = 'Workout Mix';
+
+DELIMITER //
+
+CREATE PROCEDURE GetMonthlyPlaylistCount(
+    IN p_user_id INT,
+    IN p_month INT
+)
+BEGIN
+    SELECT COUNT(*) AS total_playlists
+    FROM playlistss
+    WHERE user_id = p_user_id
+      AND MONTH(created_at) = p_month;
+END //
+
+DELIMITER ;
+CALL GetMonthlyPlaylistCount(101, 6);
+SELECT * FROM playlistss;
