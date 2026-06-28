@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodRush Typography and Colors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f7f7f7;
+            color: #262626;
+            font-family: "Roboto", Arial, sans-serif;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 32px 18px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Poppins", Arial, sans-serif;
+            margin: 0 0 14px;
+        }
+
+        p {
+            font-family: "Roboto", Arial, sans-serif;
+            margin: 0;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        .banner {
+            min-height: 270px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 14px;
+            padding: 42px;
+            border-radius: 8px;
+            color: white;
+            background-image: linear-gradient(135deg, #ff3d00, #ff9f1c);
+        }
+
+        .banner h1 {
+            max-width: 720px;
+            font-family: "Inter", Arial, sans-serif;
+            font-size: clamp(2.3rem, 7vw, 4.8rem);
+            line-height: 1;
+            font-weight: 800;
+        }
+
+        .banner p {
+            max-width: 560px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .box-row {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .color-box {
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .rgb-box {
+            background-color: rgb(20, 130, 220);
+        }
+
+        .hex-box {
+            background-color: #8e44ad;
+        }
+
+        .named-box {
+            background-color: tomato;
+        }
+
+        .text-comparison {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .text-sample {
+            padding: 22px;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        /* BEFORE: default-looking text with tighter spacing and less comfortable line height. */
+        .description-before {
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1.25;
+        }
+
+        /* AFTER: stronger weight, subtle spacing, and taller line height improve scanning. */
+        .description-after {
+            font-weight: 500;
+            letter-spacing: 0.4px;
+            line-height: 1.8;
+        }
+
+        .font-note {
+            padding: 22px;
+            border-left: 5px solid #ff3d00;
+            background-color: white;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 720px) {
+            .box-row,
+            .text-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .banner {
+                padding: 30px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="banner">
+            <h1>FoodRush</h1>
+            <p>Hot meals, snack cravings, and dessert runs delivered fast for students, creators, and late-night food lovers.</p>
+        </section>
+
+        <section>
+            <h2>Three Colored Boxes</h2>
+            <div class="box-row">
+                <div class="color-box rgb-box">RGB Color<br>rgb(20, 130, 220)</div>
+                <div class="color-box hex-box">HEX Color<br>#8e44ad</div>
+                <div class="color-box named-box">Named Color<br>tomato</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Restaurant Description Typography</h2>
+            <div class="text-comparison">
+                <article class="text-sample">
+                    <h3>Before</h3>
+                    <p class="description-before">
+                        Zesty Bowl House serves fresh wraps, spicy rice bowls, loaded fries, and chilled drinks with quick delivery across the city.
+                    </p>
+                </article>
+
+                <article class="text-sample">
+                    <h3>After</h3>
+                    <p class="description-after">
+                        Zesty Bowl House serves fresh wraps, spicy rice bowls, loaded fries, and chilled drinks with quick delivery across the city.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Trending Font Choice</h2>
+            <p class="font-note">
+                I used Inter for the FoodRush banner headline because it feels modern, clean, and energetic while staying very readable on mobile screens. That makes it a strong fit for a youth-focused food delivery app.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

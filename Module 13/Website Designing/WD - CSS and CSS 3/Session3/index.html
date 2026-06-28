@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout and Position Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f6f7fb;
+            color: #222222;
+            font-family: "Roboto", Arial, sans-serif;
+        }
+
+        .mini-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 28px;
+            border-bottom: 1px solid #dedede;
+            background-color: #ffffff;
+        }
+
+        .youtube-logo {
+            font-family: "Poppins", Arial, sans-serif;
+            font-weight: 800;
+            color: #ff0000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            color: #555555;
+            font-weight: 700;
+        }
+
+        main {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 32px 18px 96px;
+        }
+
+        section {
+            margin-bottom: 36px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Poppins", Arial, sans-serif;
+            margin: 0 0 14px;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .product-card {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 18px;
+            margin: 8px;
+            padding: 18px;
+            border: 1px solid #d7d7d7;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        .product-image {
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background-color: #eef3ff;
+            color: #2874f0;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .rating {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: #388e3c;
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .price {
+            color: #212121;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        .deal {
+            margin-top: 8px;
+            color: #388e3c;
+            font-weight: 700;
+        }
+
+        .story-bar {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            padding: 18px;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        .story {
+            width: 82px;
+            flex: 0 0 82px;
+            text-align: center;
+        }
+
+        .story-circle {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 8px;
+            padding: 4px;
+            border: 4px solid #e1306c;
+            border-radius: 50%;
+            box-sizing: border-box;
+            object-fit: cover;
+            background-color: #ffffff;
+        }
+
+        .story-circle.content-box-example {
+            box-sizing: content-box;
+            border-color: #999999;
+        }
+
+        .story span {
+            display: block;
+            font-size: 0.84rem;
+            font-weight: 700;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background-color: #ffffff;
+        }
+
+        .thumbnail {
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background-color: #202124;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .video-card h3 {
+            margin: 10px 0 4px;
+            font-size: 1rem;
+        }
+
+        .video-card p {
+            color: #606060;
+            font-size: 0.92rem;
+        }
+
+        .position-demo {
+            position: relative;
+            min-height: 170px;
+            padding: 22px;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        .chat-card {
+            max-width: 360px;
+            padding: 18px;
+            border-radius: 8px;
+            background-color: #e8f5e9;
+        }
+
+        .badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            min-width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #25d366;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .order-button {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 20;
+            padding: 15px 24px;
+            border: 0;
+            border-radius: 999px;
+            background-color: #e23744;
+            color: #ffffff;
+            font-family: "Poppins", Arial, sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            box-shadow: 0 12px 24px rgba(226, 55, 68, 0.35);
+        }
+
+        @media (max-width: 720px) {
+            .mini-navbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .product-grid,
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="mini-navbar">
+        <div class="youtube-logo">YouTube Mini</div>
+        <div class="nav-links">
+            <span>Home</span>
+            <span>Shorts</span>
+            <span>Subscriptions</span>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h1>CSS Layout and Position Practice</h1>
+            <p>Product spacing, story circles, fixed buttons, sticky navigation, and absolute positioning examples.</p>
+        </section>
+
+        <section>
+            <h2>Flipkart-Style Product Cards</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image">Wireless<br>Headphones</div>
+                    <div>
+                        <h3>BassMax Bluetooth Headphones</h3>
+                        <p>Deep bass, 40-hour battery life, fast charging, and soft ear cushions.</p>
+                        <span class="rating">4.4 star</span>
+                        <p class="price">Rs. 1,499</p>
+                        <p class="deal">Bank offer available</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">Smart<br>Watch</div>
+                    <div>
+                        <h3>FitPulse Smart Watch</h3>
+                        <p>AMOLED display, step tracking, heart-rate monitor, and water resistance.</p>
+                        <span class="rating">4.2 star</span>
+                        <p class="price">Rs. 2,299</p>
+                        <p class="deal">Free delivery today</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Instagram Story Bar</h2>
+            <div class="story-bar">
+                <div class="story">
+                    <img class="story-circle" src="https://i.pravatar.cc/120?img=1" alt="Aarav story">
+                    <span>Aarav</span>
+                </div>
+                <div class="story">
+                    <img class="story-circle" src="https://i.pravatar.cc/120?img=5" alt="Mira story">
+                    <span>Mira</span>
+                </div>
+                <div class="story">
+                    <img class="story-circle" src="https://i.pravatar.cc/120?img=8" alt="Kabir story">
+                    <span>Kabir</span>
+                </div>
+                <div class="story">
+                    <img class="story-circle" src="https://i.pravatar.cc/120?img=11" alt="Sara story">
+                    <span>Sara</span>
+                </div>
+                <div class="story">
+                    <img class="story-circle" src="https://i.pravatar.cc/120?img=16" alt="Riya story">
+                    <span>Riya</span>
+                </div>
+                <div class="story">
+                    <img class="story-circle content-box-example" src="https://i.pravatar.cc/120?img=21" alt="Content box comparison">
+                    <span>No border-box</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Sticky Video Thumbnail List</h2>
+            <div class="video-grid">
+                <article class="video-card"><div class="thumbnail">Thumbnail 1</div><h3>CSS Box Model Basics</h3><p>CodeSchool India - 24K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 2</div><h3>Food App UI Design</h3><p>Design Daily - 18K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 3</div><h3>Sticky Navbar Tutorial</h3><p>Frontend Lab - 31K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 4</div><h3>HTML Product Cards</h3><p>Web Starter - 12K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 5</div><h3>Instagram Story UI</h3><p>Pixel Practice - 44K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 6</div><h3>Fixed Buttons in CSS</h3><p>Layout Academy - 9K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 7</div><h3>Absolute vs Static</h3><p>CSS Clinic - 16K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 8</div><h3>Responsive CSS Grid</h3><p>Build Better - 28K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 9</div><h3>Navbar Layout Ideas</h3><p>UI Minutes - 35K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 10</div><h3>Card Spacing Practice</h3><p>Learn CSS - 11K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 11</div><h3>Position Fixed Demo</h3><p>Frontend Lab - 19K views</p></article>
+                <article class="video-card"><div class="thumbnail">Thumbnail 12</div><h3>Clean Product Layouts</h3><p>Design Daily - 22K views</p></article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Static vs Absolute Position</h2>
+            <div class="position-demo">
+                <div class="chat-card">
+                    <h3>WhatsApp Chat Example</h3>
+                    <p>
+                        A static element stays in the normal page flow, so it takes up space and pushes nearby content. When the notification badge is changed to absolute, it is removed from that normal flow and placed exactly inside its parent container. In apps like WhatsApp, this lets a small unread-count badge sit on the top-right corner of a chat card without pushing the chat name or message preview away.
+                    </p>
+                </div>
+                <div class="badge">3</div>
+            </div>
+        </section>
+    </main>
+
+    <button class="order-button">Order Now</button>
+</body>
+</html>

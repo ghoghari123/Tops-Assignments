@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animation Performance</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: blue;
+            animation: move 2s infinite;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(100px);
+            }
+        }
+
+        /* Disable animation on mobile */
+
+        @media (max-width:768px) {
+            .box {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+</body>
+
+</html>

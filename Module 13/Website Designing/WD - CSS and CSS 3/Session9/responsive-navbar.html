@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Navbar</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .navbar {
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+        }
+
+        /* Tablet */
+
+        @media (max-width:1024px) {
+            .menu {
+                flex-direction: column;
+            }
+        }
+
+        /* Mobile */
+
+        @media (max-width:768px) {
+            .menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="hamburger">☰</div>
+
+        <div class="menu">
+            <div>Home</div>
+            <div>Movies</div>
+            <div>Sports</div>
+            <div>Contact</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

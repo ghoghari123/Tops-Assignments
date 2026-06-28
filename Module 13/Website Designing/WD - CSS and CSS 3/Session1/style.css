@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff7ed;
+    margin: 30px;
+}
+
+.restaurant-heading {
+    background-color: #ff4f5a;
+    color: white;
+    padding: 15px;
+}
+
+.restaurant-description {
+    font-size: 20px;
+}
+
+.menu-item {
+    color: green;
+    font-style: italic;
+    margin: 8px 0;
+    padding: 8px;
+}
+
+#special-item {
+    background-color: #ffe08a;
+}
+
+.restaurant-heading,
+.menu-item {
+    border: 2px solid #333333;
+}

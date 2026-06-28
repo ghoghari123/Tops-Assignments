@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Priority and Specificity</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS overrides external CSS -->
+    <style>
+        .playlist-list {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+        <h2>Arijit Singh</h2>
+        <p>Top Artist</p>
+    </div>
+
+    <!-- Playlist Section -->
+    <div class="playlist-list">
+        <h2>My Playlist</h2>
+
+        <ul>
+            <li class="playlist-item">Kesariya</li>
+            <li class="playlist-item">Apna Bana Le</li>
+            <li class="playlist-item">Tum Hi Ho</li>
+        </ul>
+    </div>
+
+    <!--
+        Inline styles have the highest priority,
+        so the pink background color is displayed.
+    -->
+    <div class="hashtags" style="background-color:pink;">
+        <h2>Trending Hashtags</h2>
+
+        <p>#Music</p>
+        <p>#Spotify</p>
+        <p>#Trending</p>
+    </div>
+
+</body>
+
+</html>

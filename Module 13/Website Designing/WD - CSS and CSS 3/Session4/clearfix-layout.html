@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Clearfix Example</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        /* Clearfix */
+        .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .products {
+            float: left;
+            width: 70%;
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        .cart {
+            float: right;
+            width: 25%;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="products">
+            <h2>Products</h2>
+            <p>Product 1</p>
+            <p>Product 2</p>
+            <p>Product 3</p>
+        </div>
+
+        <div class="cart">
+            <h2>Cart</h2>
+            <p>Items Added</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

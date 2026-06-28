@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GSAP Product Card</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f3f6;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="https://picsum.photos/300/200">
+        <h2>Wireless Earbuds</h2>
+        <p>₹2,999</p>
+    </div>
+
+    <script>
+        gsap.from(".card", {
+            opacity: 0,
+            y: 100,
+            duration: 1.5
+        });
+    </script>
+
+</body>
+
+</html>

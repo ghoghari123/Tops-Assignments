@@ -1,0 +1,43 @@
+/*
+Question 2:
+The playlist section shows lightgreen because
+the internal CSS overrides the external CSS.
+
+Question 4:
+The profile card text shows darkblue because
+class selectors have higher specificity than
+the inherited body color.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: #f5f5f5;
+}
+
+.profile-card {
+    background-color: lightblue;
+    color: darkblue;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.playlist-list {
+    background-color: lightyellow;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Fixed specificity issue */
+.playlist-list .playlist-item {
+    color: blue;
+}
+
+.hashtags {
+    background-color: lightgray;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}

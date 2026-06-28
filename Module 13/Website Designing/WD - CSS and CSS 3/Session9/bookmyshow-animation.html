@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow Animation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /* Gradient Background */
+            background: linear-gradient(135deg,
+                    #141e30,
+                    #243b55,
+                    #4b6cb7);
+
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 42px;
+        }
+
+        .book-btn {
+            background: linear-gradient(135deg,
+                    #ff416c,
+                    #ff4b2b);
+
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+
+            box-shadow: 0 8px 20px rgba(255, 75, 43, 0.4);
+
+            transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        /* Smooth Bounce Animation */
+        @keyframes smoothBounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-12px);
+            }
+
+            50% {
+                transform: translateY(0);
+            }
+
+            70% {
+                transform: translateY(-6px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .book-btn:hover {
+            animation: smoothBounce 0.8s ease;
+            box-shadow: 0 12px 30px rgba(255, 75, 43, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>BookMyShow</h1>
+
+    <button class="book-btn">
+        Book Now
+    </button>
+
+</body>
+
+</html>

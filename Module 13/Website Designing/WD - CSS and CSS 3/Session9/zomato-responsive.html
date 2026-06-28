@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zomato Responsive</title>
+
+    <style>
+        /* Mobile First */
+
+        body {
+            font-family: Arial;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        /* Tablet */
+
+        @media (min-width:768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+        /* Laptop */
+
+        @media (min-width:1024px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+        /* Desktop */
+
+        @media (min-width:1200px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Pizza Palace</h2>
+            <p>Italian Cuisine</p>
+        </div>
+
+        <div class="card">
+            <h2>Burger Hub</h2>
+            <p>Fast Food</p>
+        </div>
+
+        <div class="card">
+            <h2>Royal Biryani</h2>
+            <p>Indian Cuisine</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
