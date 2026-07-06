@@ -4,4 +4,4 @@ from .models import *
 class RestaurantSerializer(serializers.ModelSerializer):
    class Meta:
       models = Restaurant
-      fields = ['id','name','cuisine','rating']
+      fields = '__all__'
