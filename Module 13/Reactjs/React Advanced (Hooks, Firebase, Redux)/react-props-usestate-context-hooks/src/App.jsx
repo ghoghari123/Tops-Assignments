@@ -2,8 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-import './App.css'
 import PlaylistCard from './Component/Session1/PlaylistCard'
+import LikeCounter from './Component/Session1/LikeCounter'
+import CurrentTime from './Component/Session2/CurrentTime'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,12 +24,20 @@ function App() {
       s_name: "Unstoppable",
       artist: "Sia",
       image: "https://i1.sndcdn.com/artworks-BYfsBNW1kagANPyl-aVCYog-t500x500.jpg"
+    },
+    {
+      s_name: "Perfect",
+      artist: "Ed Sheeran",
+      image: "https://m.media-amazon.com/images/I/7138OwhgdbL._AC_UF1000,1000_QL80_.jpg"
     }
   ]
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-800 via-purple-400 to-pink-500 flex items-center justify-center">
-      <PlaylistCard playlist={playlist} />
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-500 to-pink-500 p-10">
+      <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-10">
+        <Routes>
+          <Route></Route>
+        </Routes>
+      </div>
     </div>
   )
 }
